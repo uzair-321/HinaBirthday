@@ -7,7 +7,7 @@
       <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Friend Name</title>
+    <title>Happy Birthday Hina Batool</title>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab"rel="stylesheet"/> 
    <link rel="shortcut icon" type="image/png" href="birthday.png">
     <link rel="stylesheet" href="style.css">
@@ -19,37 +19,56 @@
   </head>
    <body>
     <div id="container" style="display:none">
-      <div class="s-2"></div>
+      <div class="s-2">
+        <p class="biography">
+          Today is your birthday, a special day for you. May you have many more such days, and may you continue to celebrate this day with your loved ones as always. This past year, things between us haven’t been good. I know you probably don't want wishes like these from me, but for some reason, I still felt the need to send them.
+            <br><br>
+            Your dreams have come true, and you have gained some good people in your life who may be filling the gaps that I used to fill. Maybe now you don’t need me as much as you used to. Life has its ups and downs, but with every difficulty comes ease. Unfortunately, losing you was my biggest fear in life, and now I’ve lost you, which is the biggest loss of my life, one that no one can fulfill.
+            <br><br>
+            But may you always be happy, and may my joys be yours too, because you are the forever love of my life. If you are happy in your life, then I will always be happy. People come and go in life; move forward in life and forget the past.
+            <br><br>
+            تیری نظر کو کبھی اشک کی ہوا نہ لگے<br>
+            تیرے یقیں کو کسی صورت بھی دغا نہ ملے<br>
+            خدا کرے کہ تیری عمر غم سے دور کٹے<br>
+            خدا کرے کہ تجھے کوئی بے وفا نہ ملے<br><br>
+            Happy birthday, my love. You are the only love of my life.❤❤
+        </p>
+    </div>
+    
+    
       <div class="card">
           <div class="sides left-side">
               <h1 class="profession"> Happy</h3>
-              <h3 class="name">Your Friends </h3>                
+              <h3 class="name">Hina Batool </h3>                
           </div>                     
           <div class="sides right-side">
               <h1 class="profession"> Birthday</h3>
-              <h3 class="name"> Name</h3>            
+              <h3 class="name">(Haanii)</h3>            
               </div>       
           <div class="back-side">
-              <p class="biography">
-                  When someone near and dear to you turns another year older, you’ll want to do everything you can to make their day extra memorable. Whether you’re throwing a birthday party, a cocktail party, or planning a dinner at the honoree’s favorite restaurant, you’ll want to give the guest of honor a Happy Birthday card. This year, say “Happy Birthday!” with a custom card and a few words that no one will forget. Whether you’re looking for a greeting to make someone roll over laughing or a heart-warming tearjerker, these birthday quotes are a great place to start. Find a quote or message that works for you and adapt to suit.
-  
-  
-  
-              </p>
+              
           </div>
           
-          <button class="button" onClick="window.open('wish.html');">
-            A Massage For You
-       </button>
-
           <!-- <a href="wish.html">
               <button onclick="wish.html" >A Massage For You</button>            
           </a> -->
       </div>
-      <div class="s-1"></div>
-      <div class="right-col">
-        <img src="images/play.png" id="icon">
+      <div class="s-1">
+        <!-- Play Music Icon and Text -->
+        <div class="d-flex align-items-center">
+          <p>Play Music</p>
+            <img src="images/play.png" id="icon" alt="Play Music Icon" style="width: 50px; height: 50px; opacity: 1;">
+            
+        </div>
+    
+        <!-- Message Button -->
+        <button onClick="window.open('wish.html');">
+            Click Here! Message For You
+        </button>
       </div>
+    
+    
+      
       </div>
       <span id="count"></span>
 
@@ -63,30 +82,38 @@
 
   <div class="particles-js" id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1366" height="606"></canvas></div>
   
-  <br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br>
   
-  <audio id="hbdmp" autoplay loop >
-      
-    <source src="hbd.mp3" type="audio/mp3">
+  <audio id="hbdmp" autoplay loop muted>
+    <source src="Jo Tum Mere Ho - Anuv Jain 320 Kbps.mp3" type="audio/mp3">
     Your browser does not support the audio element.
-  </audio>
+</audio>
 
-  <script>
-    var hbdmp = document.getElementById("hbdmp")
-    var icon = document.getElementById("icon")
+<script>
+    // Access audio and icon elements
+    var hbdmp = document.getElementById("hbdmp");
+    var icon = document.getElementById("icon");
 
-    icon.onclick = function(){
-     if(hbdmp.paused){
-       hbdmp.play();
-       icon.src ="images/pause.png";
-     }else{
-       hbdmp.pause();
-       icon.src = "images/play.png";
-     }
+    // Ensure audio plays automatically and unmute after page load
+    window.addEventListener('load', function () {
+        hbdmp.muted = false; // Unmute the audio
+        hbdmp.play().catch(error => {
+            console.log("Autoplay prevented, waiting for user interaction.");
+        });
+    });
 
-    }
+    // Toggle play/pause on icon click
+    icon.onclick = function () {
+        if (hbdmp.paused) {
+            hbdmp.play();
+            icon.src = "images/pause.png";
+        } else {
+            hbdmp.pause();
+            icon.src = "images/play.png";
+        }
+    };
+</script>
 
-  </script>
   <script>
 
     setTimeout(function() {
